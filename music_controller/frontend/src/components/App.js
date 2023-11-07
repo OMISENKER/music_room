@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-export const App = () => {
+const App = () => {
   return (
-    <div><h1>Test, Please work</h1></div>
+    <div>
+      <h1>Test, React render</h1>
+    </div>
   )
 }
-
-export default App();
 
 const appDiv = document.getElementById("app");
 render(<App />, appDiv);

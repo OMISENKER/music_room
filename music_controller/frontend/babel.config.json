@@ -10,6 +10,6 @@
     ],
     "@babel/preset-react"
   ],
-  "plugins": ["@babel/@babel/plugin-proposal-class-properties"]
-  //if error occurs, use  plugin-transform-class-properties
+  "plugins": ["@babel/plugin-transform-class-properties"]
+  //if error occurs, use plugin-proposal-class-properties
 }
