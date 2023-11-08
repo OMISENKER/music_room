@@ -1,13 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
+import { HomePage } from "./HomePage";
 
-const App = () => {
+function App(props) {
   return (
     <div>
-      <h1>Test, React render</h1>
+      <HomePage />
     </div>
-  )
+  );
 }
 
 const appDiv = document.getElementById("app");
-render(<App />, appDiv);
+render(<App/>, appDiv);
+
