@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Grid, Typography, TextField, FormHelperText, FormControl, Radio, RadioGroup, FormControlLabel, FormLabel } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const CreateRoomPage = () => {
   const defaultVotes = 2; 
@@ -9,6 +9,8 @@ export const CreateRoomPage = () => {
     guestCanPause: true,
     votesToSkip: defaultVotes,
   });
+
+  const navigate = useNavigate();
 
   const handleVotesChange = (e) => {
     setState({
@@ -42,7 +44,7 @@ export const CreateRoomPage = () => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
+      navigate(`/room/${data.code}`);
     })
     .catch((error) => {
       console.error('There was a problem with the fetch operation:', error);
