@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot, render } from "react-dom/client";
 import { HomePage } from "./HomePage";
 
 function App(props) {
@@ -11,5 +11,6 @@ function App(props) {
 }
 
 const appDiv = document.getElementById("app");
-render(<App/>, appDiv);
+const root = createRoot(appDiv);
+root.render(<App/>);
 
