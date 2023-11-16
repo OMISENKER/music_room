@@ -4,7 +4,7 @@ import { HomePage } from "./HomePage";
 
 function App(props) {
   return (
-    <div>
+    <div className="center">
       <HomePage />
     </div>
   );
